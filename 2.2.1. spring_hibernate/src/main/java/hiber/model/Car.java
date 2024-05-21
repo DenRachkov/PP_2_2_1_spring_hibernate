@@ -6,14 +6,15 @@ import javax.persistence.*;
 @Entity
 @Table(name = "car")
 public class Car {
-    @Column(name = "model")
-    String model;
-
-    @Column(name = "series")
-    int series;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "model")
+    private String model;
+
+    @Column(name = "series")
+    private int series;
+
 
 
     public void setId(Long id) {
